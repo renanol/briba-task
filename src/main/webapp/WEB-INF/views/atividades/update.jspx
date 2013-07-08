@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <script/>
+    <form:update id="fu_br_com_kamaleon_business_projeto_Atividade" modelAttribute="atividade" path="/atividades" versionField="none" z="rZnzl+Px6Ov/4r0rM4mkYExm+Ys=">
+        <field:display field="id" id="s_br_com_kamaleon_business_projeto_Atividade_id" object="${atividade}" z="none"/>
+        <field:select field="projeto" id="c_br_com_kamaleon_business_projeto_Atividade_projeto" itemLabel="descricao" itemValue="id" items="${projetoes}" path="/projetoes" required="true" z="user-managed"/>
+        <field:input field="titulo" id="c_br_com_kamaleon_business_projeto_Atividade_titulo" z="qVf/Ocafb3TGtNYdWhn0U+CMKtA="/>
+        <field:textarea field="descricao" id="c_br_com_kamaleon_business_projeto_Atividade_descricao" z="SuPqHRFIyF9pIdEW9T/4FxMzrb8="/>
+        <field:datetime dateTimePattern="${atividade_datainicio_date_format}" field="dataInicio" id="c_br_com_kamaleon_business_projeto_Atividade_dataInicio" required="true" z="3MuqUFJkuoBlZri/GqpZSukE/n4="/>
+        <field:select field="usuarioCadastro" id="c_br_com_kamaleon_business_projeto_Atividade_usuarioCadastro" itemLabel="login" itemValue="id" items="${usuarios}" path="/usuarios" z="user-managed"/>
+        <field:select field="usuarioAlocado" id="c_br_com_kamaleon_business_projeto_Atividade_usuarioAlocado" itemLabel="login" itemValue="id" items="${usuarios}" path="/usuarios" required="true" z="user-managed"/>
+        <field:select field="modulo" id="c_br_com_kamaleon_business_projeto_Atividade_modulo" itemLabel="descricao" itemValue="id" items="${moduloes}" path="/moduloes" required="true" z="user-managed"/>
+        <field:select field="subModulo" id="c_br_com_kamaleon_business_projeto_Atividade_subModulo" itemLabel="descricao" itemValue="id" items="${submoduloes}" path="/submoduloes" required="true" z="user-managed"/>
+        <field:select field="versao" id="c_br_com_kamaleon_business_projeto_Atividade_versao" itemLabel="descricao" itemValue="id" items="${versaos}" path="/versaos" z="user-managed"/>
+        <field:select field="cliente" id="c_br_com_kamaleon_business_projeto_Atividade_cliente" itemLabel="nome" itemValue="id" items="${clientes}" path="/clientes" z="user-managed"/>
+        <field:select field="categoria" id="c_br_com_kamaleon_business_projeto_Atividade_categoria" itemLabel="descricao" itemValue="id" items="${categorias}" path="/categorias" z="user-managed"/>
+        <field:select field="prioridade" id="c_br_com_kamaleon_business_projeto_Atividade_prioridade" itemLabel="descricao" itemValue="id" items="${prioridades}" path="/prioridades" required="true" z="user-managed"/>
+        <field:select field="statusAtividade" id="c_br_com_kamaleon_business_projeto_Atividade_statusAtividade" items="${statusatividades}" path="statusatividades" z="Dked06I4ufAg5MJr9ddoQRXvdi4="/>
+        <field:input field="tempoEstimado" id="c_br_com_kamaleon_business_projeto_Atividade_tempoEstimado" z="krBPOE+/wnuUXmHnJV7sclDHhW0="/>
+        <field:checkbox field="commitado" id="c_br_com_kamaleon_business_projeto_Atividade_commitado" z="+vhb6/QQd318x/XYL5PvvXPgnb8="/>
+        <field:input field="atividadePai" id="c_br_com_kamaleon_business_projeto_Atividade_atividadePai" z="H2plQI8eRYRB1NoVNkM3gaLVC+g="/>
+        <field:datetime dateTimePattern="${atividade_dataprevista_date_format}" field="dataPrevista" id="c_br_com_kamaleon_business_projeto_Atividade_dataPrevista" z="jUECiEkSIcaUVyp/D8VosQbNSug="/>
+        <hr/>
+        <field:textarea field="comentario" id="c_br_com_kamaleon_business_projeto_Atividade_comentario" required="true" z="user-managed"/>
+        <field:input field="tempoGasto" id="c_br_com_kamaleon_business_projeto_Atividade_tempoGasto" z="2SP1D2qbFvW45DcPIrNnwR+y9V4="/>
+        <field:input field="progresso" id="c_br_com_kamaleon_business_projeto_Atividade_progresso" render="false" z="user-managed"/>
+        <label for="progresso">Progresso</label>
+        <select id="progresso" name="progresso">
+            <option value="5%">5%</option>
+            <option value="10%">10%</option>
+            <option value="15%">15%</option>
+            <option value="20%">20%</option>
+            <option value="25%">25%</option>
+            <option value="30%">30%</option>
+            <option value="35%">35%</option>
+            <option value="40%">40%</option>
+            <option value="45%">45%</option>
+            <option value="50%">50%</option>
+            <option value="55%">55%</option>
+            <option value="60%">60%</option>
+            <option value="65%">65%</option>
+            <option value="70%">70%</option>
+            <option value="75%">75%</option>
+            <option value="80%">80%</option>
+            <option value="85%">85%</option>
+            <option value="90%">90%</option>
+            <option value="95%">95%</option>
+            <option value="100%">100%</option>
+        </select>
+        <field:input disableFormBinding="true" field="arquivo" id="c_br_com_kamaleon_business_projeto_Atividade_arquivo" render="false" z="user-managed"/>
+        <field:textarea field="caminhoArquivo" id="c_br_com_kamaleon_business_projeto_Atividade_caminhoArquivo" render="false" z="user-managed"/>
+    </form:update>
+</div>

@@ -1,0 +1,66 @@
+<jsp:root xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:fn="http://java.sun.com/jsp/jstl/functions" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+
+ 
+ <jsp:output omit-xml-declaration="true" />
+
+  
+  <!-- BOOTSTRAP  -->
+  <spring:url value="/resources/layout/css/bootstrap.min.css" var="bootstrap_url" />
+  <spring:url value="/resources/layout/css/bootstrap-responsive.min.css" var="bootstrapresponsive_url" />
+  
+  <!-- TEMPLATE -->
+  
+  <spring:url value="/resources/layout/css/unicorn.main.css" var="unicorn_url" />
+  <spring:url value="/resources/layout/css/unicorn.grey.css" var="unicornlayout_url" />
+  
+  <spring:url value="/resources/layout/jquerytable/blue/style.css" var="table_url" />
+  
+
+  <!-- FULLCALENDAR -->
+  <spring:url value="/resources/layout/css/fullcalendar.css" var="fullcalendar_url" />
+  
+  <link rel="stylesheet" type="text/css" href="${bootstrap_url}" />  
+  <link rel="stylesheet" type="text/css" href="${bootstrapresponsive_url}" />  
+  <link rel="stylesheet" type="text/css" media="screen" href="${unicorn_url}" />  
+  <link rel="stylesheet" type="text/css" href="${unicornlayout_url}" />
+  <link rel="stylesheet" type="text/css" href="${fullcalendar_url}" />
+  <link rel="stylesheet" type="text/css" href="${table_url}" />
+  
+  <!-- JS -->  
+  <spring:url value="/resources/layout/js/excanvas.min.js" var="excanvas_url" />
+  <spring:url value="/resources/layout/js/jquery.min.js" var="jquery_url" />
+  <spring:url value="/resources/layout/js/jquery.ui.custom.js" var="jqueryui_url" />
+  <spring:url value="/resources/layout/js/bootstrap.min.js" var="bootstrapjs_url" />  
+  
+  
+  <spring:url value="/resources/layout/js/jquery.flot.min.js" var="jqueryflot_url" />
+  <spring:url value="/resources/layout/js/jquery.flot.resize.min.js" var="jqueryflotrezise_url" />
+  <spring:url value="/resources/layout/js/jquery.peity.min.js" var="jquerypeity_url" />
+  <spring:url value="/resources/layout/js/fullcalendar.min.js" var="fullcalendarjs_url" />
+  <spring:url value="/resources/layout/js/unicorn.js" var="unicornjs_url" />
+  <spring:url value="/resources/layout/js/unicorn.dashboard.js" var="dashboard_url" />
+  
+    <spring:url value="/resources/layout/jquerytable/jquery.tablesorter.js" var="tablejs_url" />
+  
+
+  <script language="JavaScript" src="${excanvas_url}" type="text/javascript"><!-- required for FF3 and Opera --></script>
+  
+  <script language="JavaScript" src="${jquery_url}" type="text/javascript"><!-- required for FF3 and Opera --></script>
+  <script language="JavaScript" src="${jqueryui_url}" type="text/javascript"><!-- required for FF3 and Opera --></script>
+  
+  <script language="JavaScript" src="${bootstrapjs_url}" type="text/javascript"><!-- required for FF3 and Opera --></script>  
+  
+  <script language="JavaScript" src="${jqueryflot_url}" type="text/javascript"><!-- required for FF3 and Opera --></script>
+  <script language="JavaScript" src="${jqueryflotrezise_url}" type="text/javascript"><!-- required for FF3 and Opera --></script>
+  <script language="JavaScript" src="${jquerypeity_url}" type="text/javascript"><!-- required for FF3 and Opera --></script>
+  <script language="JavaScript" src="${fullcalendarjs_url}" type="text/javascript"><!-- required for FF3 and Opera --></script>
+  <script language="JavaScript" src="${unicornjs_url}" type="text/javascript"><!-- required for FF3 and Opera --></script>
+  <script language="JavaScript" src="${dashboard_url}" type="text/javascript"><!-- required for FF3 and Opera --></script>
+  <script language="JavaScript" src="${tablejs_url}" type="text/javascript"><!-- required for FF3 and Opera --></script>    
+      
+  
+  <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+</jsp:root>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_br_com_kamaleon_business_projeto_Atividade" object="${atividade}" path="/atividades" z="XVjK/E1f3Q5l1pr/WWn8hbVQG8c=">
+        <field:display field="id" id="s_br_com_kamaleon_business_projeto_Atividade_id" object="${atividade}" z="none"/>
+        <field:display field="titulo" id="s_br_com_kamaleon_business_projeto_Atividade_titulo" object="${atividade}" z="RwVGapZkMDH1hy5E1U3elyRZHOw="/>
+        <field:display field="descricao" id="s_br_com_kamaleon_business_projeto_Atividade_descricao" object="${atividade}" z="P7G15oOZjp8IozkFPFYGmyDK7io="/>
+        <field:display field="usuarioCadastro" id="s_br_com_kamaleon_business_projeto_Atividade_usuarioCadastro" object="${atividade}" z="user-managed"/>
+        <field:display field="usuarioAlocado" id="s_br_com_kamaleon_business_projeto_Atividade_usuarioAlocado" object="${atividade}" z="user-managed"/>
+        <field:display field="modulo" id="s_br_com_kamaleon_business_projeto_Atividade_modulo" object="${atividade}" z="3OsNpw6VI1HseC7HpJ/W5RLhmuM="/>
+        <field:display field="subModulo" id="s_br_com_kamaleon_business_projeto_Atividade_subModulo" object="${atividade}" z="KnbhTmN3jbDYC+OTgnPmiyjTujE="/>
+        <field:display field="versao" id="s_br_com_kamaleon_business_projeto_Atividade_versao" object="${atividade}" z="sKKUxLLATXmqSRQJgFmyyHYVa9I="/>
+        <field:display field="cliente" id="s_br_com_kamaleon_business_projeto_Atividade_cliente" object="${atividade}" z="user-managed"/>
+        <field:display field="categoria" id="s_br_com_kamaleon_business_projeto_Atividade_categoria" object="${atividade}" z="f+k93OnNI/lpHIGxq0+gmHqBreQ="/>
+        <field:display field="prioridade" id="s_br_com_kamaleon_business_projeto_Atividade_prioridade" object="${atividade}" z="yct5pLtNtIppN1LH1LaD6Y6M+8k="/>
+        <field:display field="commitado" id="s_br_com_kamaleon_business_projeto_Atividade_commitado" object="${atividade}" z="2BbcYf6/B+gAoNiONc0FbT8efKY="/>
+        <field:display date="true" dateTimePattern="${atividade_datainicio_date_format}" field="dataInicio" id="s_br_com_kamaleon_business_projeto_Atividade_dataInicio" object="${atividade}" z="vOICxE+AgfIrYi9+4g54b9+w0Uc="/>
+        <field:display field="tempoEstimado" id="s_br_com_kamaleon_business_projeto_Atividade_tempoEstimado" object="${atividade}" z="hyuK2kQ5gMoYnXrhHP6uEYD6T2g="/>
+        <field:display field="tempoGasto" id="s_br_com_kamaleon_business_projeto_Atividade_tempoGasto" object="${atividade}" z="l0ID6xiu4fg7ncta34E7PEyWXS4="/>
+        <field:display field="comentario" id="s_br_com_kamaleon_business_projeto_Atividade_comentario" object="${atividade}" z="9juHEEgbRyNap0x0hTM2SP8jq6g="/>
+        <field:display date="true" dateTimePattern="${atividade_dataprevista_date_format}" field="dataPrevista" id="s_br_com_kamaleon_business_projeto_Atividade_dataPrevista" object="${atividade}" z="qdVahnj1m3VB32ltjEFctVAXInI="/>
+        <field:display field="atividadePai" id="s_br_com_kamaleon_business_projeto_Atividade_atividadePai" object="${atividade}" z="S+ntkAUp0oD+gnT1/WbpzOkzyEs="/>
+        <field:display field="projeto" id="s_br_com_kamaleon_business_projeto_Atividade_projeto" object="${atividade}" z="8BkPDtP+mcPByfbnYcGUiQ8Amqc="/>
+        <field:display field="statusAtividade" id="s_br_com_kamaleon_business_projeto_Atividade_statusAtividade" object="${atividade}" z="5j8zWsbvmwxlL5ktDmJjsv47/Xk="/>
+        <field:display field="progresso" id="s_br_com_kamaleon_business_projeto_Atividade_progresso" object="${atividade}" z="/gVPiNPet5CtoZSOgnyNJ+CLXKA="/>
+        <field:display field="arquivo" id="s_br_com_kamaleon_business_projeto_Atividade_arquivo" object="${atividade}" render="false" z="user-managed"/>
+        <field:display field="caminhoArquivo" id="s_br_com_kamaleon_business_projeto_Atividade_caminhoArquivo" object="${atividade}" render="false" z="user-managed"/>
+        <br/>
+        <br/>
+        <a href="${atividade.caminhoArquivo}" target="_blank">Download do Arquivo</a>
+    </page:show>
+    <util:panel id="" title="Atividade Histórico">
+        <c:forEach items="${atividadesHistorico}" var="historico">
+            <ul style="list-style:none">
+                <c:if test="${not empty historico.acao}">
+                    <h5>
+                        <b>Ação:</b> ${historico.acao}</h5>
+                </c:if>
+                <c:if test="${not empty historico.usuario}">
+                    <li>
+                        <b>Usuário:</b> ${historico.usuario.login}</li>
+                </c:if>
+                <c:if test="${not empty historico.descricao}">
+                    <li>
+                        <b>Descrição:</b> ${historico.descricao}</li>
+                </c:if>
+                <c:if test="${not empty historico.data}">
+                    <li>
+                        <b>Data:</b> ${historico.data}</li>
+                </c:if>
+                <c:if test="${not empty historico.progresso}">
+                    <li>
+                        <b>Progresso:</b> ${historico.progresso}</li>
+                </c:if>
+                <c:if test="${not empty historico.horasTrabalhada}">
+                    <li>
+                        <b>Horas:</b> ${historico.horasTrabalhada}</li>
+                </c:if>
+            </ul>
+            <hr/>
+        </c:forEach>
+    </util:panel>
+</div>

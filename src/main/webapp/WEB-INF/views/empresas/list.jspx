@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_br_com_kamaleon_business_pessoa_empresa_Empresa" items="${empresas}" z="UqnxQjOnwHhNLLOmkNfXIicciFA=">
+        <table:table data="${empresas}" id="l_br_com_kamaleon_business_pessoa_empresa_Empresa" path="/empresas" z="y9v4aQTKsHfKFAyTjtmPq5Cr5KQ=">
+            <table:column id="c_br_com_kamaleon_business_pessoa_empresa_Empresa_descricao" property="descricao" z="jOs4KIKWUJ88Fj09uAxBJUxnwrc="/>
+            <table:column id="c_br_com_kamaleon_business_pessoa_empresa_Empresa_observacao" property="observacao" z="JmNi2WMiBMpPfFCfnGlLXt1IaQM="/>
+            <table:column id="c_br_com_kamaleon_business_pessoa_empresa_Empresa_nome" property="nome" z="KYZpRV/jruDuGsdw/fNS3x0zOxE="/>
+            <table:column id="c_br_com_kamaleon_business_pessoa_empresa_Empresa_endereco" property="endereco" z="Fr0ZoXQkwtV7TgbySJL28QuZBt0="/>
+            <table:column id="c_br_com_kamaleon_business_pessoa_empresa_Empresa_apelido" property="apelido" z="mdftBeTtH+PxM9UWCYIkQGR9Yek="/>
+            <table:column id="c_br_com_kamaleon_business_pessoa_empresa_Empresa_cpfCnpj" property="cpfCnpj" z="fFeYUYfV2F6rKIA1QEobTu3YVfs="/>
+        </table:table>
+    </page:list>
+</div>

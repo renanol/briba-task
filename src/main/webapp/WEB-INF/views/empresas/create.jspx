@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:create id="fc_br_com_kamaleon_business_pessoa_empresa_Empresa" modelAttribute="empresa" path="/empresas" render="${empty dependencies}" z="BdH7eoDpFoelV+0SzWbgmPJ2RzA=">
+        <field:input field="nome" id="c_br_com_kamaleon_business_pessoa_empresa_Empresa_nome" z="ocbOkhT7OpkMmNNVpwnkkhgKgH8="/>
+        <field:select field="endereco" id="c_br_com_kamaleon_business_pessoa_empresa_Empresa_endereco" itemValue="id" items="${enderecoes}" path="/enderecoes" render="false" z="user-managed"/>
+        <field:input field="apelido" id="c_br_com_kamaleon_business_pessoa_empresa_Empresa_apelido" z="MbB9VeOTFnKRxzkKcLaPu0CRuaQ="/>
+        <field:input field="cpfCnpj" id="c_br_com_kamaleon_business_pessoa_empresa_Empresa_cpfCnpj" z="uc/R3ZYHKW0XKXdbHhXaP7yB9Tw="/>
+        <!-- Endereço -->
+        <field:input field="endereco.logradouro" id="c_br_com_kamaleon_business_endereco_Endereco_logradouro" z="manager-user"/>
+        <field:input field="endereco.bairro" id="c_br_com_kamaleon_business_endereco_Endereco_bairro" z="manager-user"/>
+        <field:input field="endereco.numero" id="c_br_com_kamaleon_business_endereco_Endereco_numero" z="manager-user"/>
+        <field:input field="endereco.cidade" id="c_br_com_kamaleon_business_endereco_Endereco_cidade" z="manager-user"/>
+        <field:input field="endereco.estado" id="c_br_com_kamaleon_business_endereco_Endereco_estado" z="manager-user"/>
+        <field:input field="endereco.cep" id="c_br_com_kamaleon_business_endereco_Endereco_cep" z="manager-user"/>
+        <field:input field="descricao" id="c_br_com_kamaleon_business_pessoa_empresa_Empresa_descricao" z="LCZa5d0Rb/McSfsvtz5tfWNo9DM="/>
+        <field:textarea field="observacao" id="c_br_com_kamaleon_business_pessoa_empresa_Empresa_observacao" z="B0492a5VNonzEdkU2VAUUHE9ji8="/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_br_com_kamaleon_business_pessoa_empresa_Empresa" render="${not empty dependencies}" z="yh4PBwzBxkPU59HrEiwkU+Lpo3M="/>
+</div>

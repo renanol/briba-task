@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_br_com_kamaleon_business_pessoa_funcionario_Funcionario" object="${funcionario}" path="/funcionarios" z="qkEoKxD2lSuePLnj4C+0Qc13PvM=">
+        <field:display date="true" dateTimePattern="${funcionario_datanascimento_date_format}" field="dataNascimento" id="s_br_com_kamaleon_business_pessoa_funcionario_Funcionario_dataNascimento" object="${funcionario}" z="Qg8MfiNPCPE1942HrGSJ6M3aXis="/>
+        <field:display date="true" dateTimePattern="${funcionario_dataadmissao_date_format}" field="dataAdmissao" id="s_br_com_kamaleon_business_pessoa_funcionario_Funcionario_dataAdmissao" object="${funcionario}" z="65GPa+oXsMRfSkjeJ4SPhGkhU/E="/>
+        <field:display field="usuario" id="s_br_com_kamaleon_business_pessoa_funcionario_Funcionario_usuario" object="${funcionario}" z="cU/fVTo6pLReMrrQq+/kThG9YcI="/>
+        <field:display field="cargo" id="s_br_com_kamaleon_business_pessoa_funcionario_Funcionario_cargo" object="${funcionario}" z="mURXWzhzs2azME7fbs45iXKpiyg="/>
+        <field:display field="nome" id="s_br_com_kamaleon_business_pessoa_funcionario_Funcionario_nome" object="${funcionario}" z="0AqnZiut73h6uHqkgxRjM/GkeZ8="/>
+        <field:display field="endereco" id="s_br_com_kamaleon_business_pessoa_funcionario_Funcionario_endereco" object="${funcionario}" z="lQf99BrdyCsGVXWynynegoJFqzE="/>
+        <field:display field="apelido" id="s_br_com_kamaleon_business_pessoa_funcionario_Funcionario_apelido" object="${funcionario}" z="Lf7OoVksh+2H3U2kQzW3MaeV9Vs="/>
+        <field:display field="cpfCnpj" id="s_br_com_kamaleon_business_pessoa_funcionario_Funcionario_cpfCnpj" object="${funcionario}" z="lEKJdTQXEvDIROaLIwJX/5Xl9rw="/>
+    </page:show>
+</div>

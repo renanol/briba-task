@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_br_com_kamaleon_business_projeto_versao_Versao" object="${versao}" path="/versaos" z="lgaq2IgVe154FLElLf1Idxq/ujA=">
+        <field:display field="descricao" id="s_br_com_kamaleon_business_projeto_versao_Versao_descricao" object="${versao}" z="DnouvCfn90KKwKxc51P9FTOWEJM="/>
+        <field:display date="true" dateTimePattern="${versao_data_date_format}" field="data" id="s_br_com_kamaleon_business_projeto_versao_Versao_data" object="${versao}" z="VUJG780+7fPI6OR5PeSO6pUKNhI="/>
+        <table>
+            <thead>
+                <th>ID</th>
+                <th>Titulo</th>
+                <th>Data</th>
+            </thead>
+            <tbody>
+                <c:forEach items="${atividades}" var="atividade">
+                    <tr>
+                        <td>${atividade.id}</td>
+                        <td>${atividade.titulo}</td>
+                        <td>${atividade.dataInicio}</td>
+                    </tr>
+                </c:forEach>
+            </tbody>
+        </table>
+        <field:display field="atividades" id="s_br_com_kamaleon_business_projeto_versao_Versao_atividades" object="${versao}" render="false" z="user-managed"/>
+    </page:show>
+</div>

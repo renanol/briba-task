@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_br_com_kamaleon_business_endereco_Endereco" items="${enderecoes}" z="rKgaVM6zqBKrd9z64CUkexul1r0=">
+        <table:table data="${enderecoes}" id="l_br_com_kamaleon_business_endereco_Endereco" path="/enderecoes" z="H+ahqQAhNi99acvqunuqq7yF7nY=">
+            <table:column id="c_br_com_kamaleon_business_endereco_Endereco_logradouro" property="logradouro" z="DriokNY2ADtyQZsfB0NwwzRlWdk="/>
+            <table:column id="c_br_com_kamaleon_business_endereco_Endereco_bairro" property="bairro" z="ztmXtylRn4iiO8APJXU+u76To7Q="/>
+            <table:column id="c_br_com_kamaleon_business_endereco_Endereco_numero" property="numero" z="aLssLaoKGflf4VJ5ywZKoIg9dyo="/>
+            <table:column id="c_br_com_kamaleon_business_endereco_Endereco_cep" property="cep" z="4Dz+OOnUvZlNd58RUr8bvEWvDBU="/>
+            <table:column id="c_br_com_kamaleon_business_endereco_Endereco_estado" property="estado" z="04K0Cywqh/Q6RV5eiqb7Xy9FT6E="/>
+            <table:column id="c_br_com_kamaleon_business_endereco_Endereco_cidade" property="cidade" z="2rGnZlsh7JGrTwMre1zc8D57XYg="/>
+        </table:table>
+    </page:list>
+</div>

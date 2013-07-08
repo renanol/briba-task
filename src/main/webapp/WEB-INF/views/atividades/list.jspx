@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core"  xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:spring="http://www.springframework.org/tags" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:util="urn:jsptagdir:/WEB-INF/tags/util" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    
+<SCRIPT type="text/javascript">
+    
+    <![CDATA[
+
+    	$(document).ready(function(){
+    		
+    		
+    		$( "#dataInicio" ).datepicker($.datepicker.regional[ "pt-BR" ]);
+    		$( "#dataFinal" ).datepicker($.datepicker.regional[ "pt-BR" ]);
+	    		
+    		$("#carregando").hide();
+    		$("#versasdo").hide();
+    		$("#versaaso").hide();
+    		
+    		$("body").ajaxStart(function(){
+    			
+    		});
+    		
+    		$("#carregando").ajaxComplete(function(){
+
+    		});
+ 			
+ 			$("#carregando").ajaxError(function(event, request, settings){
+ 			   
+ 			});
+ 			
+ 			$("#finalizarAtividade").click(function(){
+	  			console.log($(this).attr('value'));
+	  		});
+ 			
+ 			$("select").width("150");
+    		
+    		$('#btnFiltrar').click(function(){
+    			
+    			var codigo = $("#codigo").val(),
+    				titulo = $("#titulo").val(),
+    				idProjeto = $('select#_projeto_id').val(),
+    				idSubModulo =  $('select#_subModulo_id').val(),
+    				idModulo =  $('select#_modulo_id').val(),
+    				idCliente =  $('select#cliente').val(),
+    				idVersao =  $('select#versao').val(),
+    				idUsuario =  $('select#usuario').val(),
+    				idPrioridade =  $('select#prioridade').val(),
+    				idStatus =  $('select#status').val(),
+    				dataInicio =  $('#dataInicio').val(),
+    				dataFinal =  $('#dataFinal').val(),
+    				commitado =  $('select#commitado').val();
+
+
+    				
+    			$( "#result" ).empty();
+    			$("table > tbody").empty();
+    							    			
+    			$.get("atividades/filtro", {commitado: commitado, dataInicio:dataInicio, dataFinal:dataFinal, status:idStatus, usuario:idUsuario, prioridade:idPrioridade, codigo: codigo,titulo:titulo, projeto: idProjeto, modulo: idModulo, submodulo: idSubModulo, cliente:idCliente, versao: idVersao },
+	    			function(data){
+    					
+	    				if(data.length > 0){	    					
+		    				$.each(data, function(key, val) {
+		    					var row = "<tr>";		    					
+		    					row += "<td><img src="+val.usuarioAlocado.urlFoto+" /></td>"
+		      	  				row += "<td>"+val.id+"</td>"
+								row += "<td><a href='#' title='<b>Descrição:</b> "+val.descricao+"<br /><br />"+"<b>Usuário Alocado:</b> "+val.usuarioAlocado.login +"' "+val.titulo+"</a></td>"
+								var date = new Date(val.dataInicio);
+								row += "<td>"+ date.getDate()+"/"+(date.getMonth()+1)+"/"+date.getFullYear()+"</td>"
+								row += "<td>"+val.projeto.descricao+"</td>"
+								var modulo = "";
+								if(val.modulo){
+									modulo = val.modulo.descricao
+								} 
+								row += "<td>"+modulo+"</td>"
+								row += "<td>"
+						            	+"<a href='/briba-task/atividades/"+val.id+"' alt='Visualizar' title='Visualizar'><img alt='Visualializar' class='image' src='/briba-task/resources/images/show.png' title='Visualizar' /></a>"
+						            	+"<a href='/briba-task/atividades/"+val.id+"?form' alt='Editar' title='Editar'><img alt='Editar' class='image' src='/briba-task/resources/images/update.png' title='Editar' /></a>"
+						            	if(val.statusAtividade === "FECHADO"){						            		
+					            			+ "<a href='#' title='Editar'><img class='image' src='/briba-task/resources/images/delete.png' title='Finalizar Tarefa' /></a>";
+						            	}	
+					          			+"</td>";
+					          	row += "</tr>";
+		      	  				
+			      	  			$("table/tbody:first").append(row);
+
+		      	  			});
+		    				
+		    				
+		    				//após preencher toda a tabela, não esquecer de chamar a função abaixo
+		    				//para que o jquerydatable reconheça as alterações!
+		    				$("#large").trigger("tableupdate"); 
+		    				
+	    				}else{
+	    					$( "#result" ).empty().append( "Resultado Vazio!" );
+	    				}
+	    			}    			
+    			
+    			);
+    			
+    		});	  	
+	  		
+    		$("#large").tablesorter({"bJQueryUI": true, headers:{0:{sorter:false}, 6:{sorter:false}}});
+
+    		$( document ).tooltip();
+    		
+    		var opcao = "<option selected='selected' value='0'>-- Selecione --</option>";
+	  		var opcaoN = "<option selected='selected' disabled value='0'>-- Nenhum --</option>";
+	  		
+	  		$('#_projeto_id').append(opcao);
+	  		$('#_modulo_id').append(opcaoN);
+	  		$('#_subModulo_id').append(opcaoN);
+	  		
+	  		$.getJSON("/briba-task/projetoes/json", function(data){
+  	  			$.each(data, function(key, val) {
+  	  				var option = "<option value='"+val.id+"'>"+val.descricao+"</option>";  		    		
+  	  				$('#_projeto_id').append(option);
+
+  	  			});
+  	  		});
+	  		
+	  		$("#_projeto_id").click(function(){
+	  			
+	  			$('#_modulo_id').empty();
+	  			$('#_subModulo_id').empty();
+	    		$('#_modulo_id').append(opcao);
+	    		$('#_subModulo_id').append(opcao);
+	
+	  	  		var idProjeto = $('#_projeto_id option:selected').val();
+	  			$.getJSON("/briba-task/atividades/json/"+idProjeto, function(data){
+	  				console.log(data);
+	  	  			$.each(data, function(key, val) {	  	  				
+	  	  				var option = "<option value='"+val.id+"'>"+val.descricao+"</option>";
+	  		    		$('#_modulo_id').append(option);
+	
+	  	  			});
+	  	  		});			
+	  		});
+	  		
+	  		$("#_modulo_id").click(function(){
+	  			
+	  			$('#_subModulo_id').empty();
+	    		$('#_subModulo_id').append(opcao);
+	    		
+	  	  		var idModulo = $('#_modulo_id option:selected').val();
+	  			$.getJSON("/briba-task/atividades/json/sub/"+idModulo, function(data){
+	  	  			$.each(data, function(key, val) {
+	  	  				var option = "<option value='"+val.id+"'>"+val.descricao+"</option>";
+	  		    		$('#_subModulo_id').append(option);
+			
+	  	  			});
+	  	  		});			
+	  		});
+    		
+    	});
+    	
+    
+    	function finalizarTarefa(id){
+    		
+    		$(document).ready(function(){
+    			$.get('/briba-task/atividades/finalizarAtividade/'+id, function(data){
+    				
+    			});	
+    		});
+    	}
+    	
+    ]]>
+    
+</SCRIPT>
+
+
+    
+    
+    <util:panel id="resultado" title="Atividades">
+    
+    <table:fieldset field="Filtros">                    
+            <label for="codigo">Código</label>
+            <input id="codigo" name="codigo" type="text"/>
+            <br/>
+            <label for="titulo">Titulo</label>
+            <input id="titulo" name="titulo" type="text"/>            
+            <br/>
+            <label for="_projeto_id">Projeto</label>
+            <select id="_projeto_id"></select>
+            <br/>
+            <label for="a">Projetoa</label>
+            <select id="a"></select>
+            <br/>
+            <label for="_modulo_id">Modulo</label>
+            <select id="_modulo_id"></select>
+            <br/>
+            <label for="b">Projetoc</label>
+            <select id="b"></select>
+            <br/>
+            <label for="_subModulo_id">Sub Modulo</label>
+            <select id="_subModulo_id"></select>
+            
+            <br/>
+            <label for="_subModulo_ida">Sub Modulo</label>
+            <select id="_subModulo_ida"></select>
+            <br/>
+            <label for="cliente">Cliente</label>
+            <select id="cliente">
+            	<option selected='selected' value='0'>-- Selecione --</option>
+	            <c:forEach var="cliente" items="${clientes}">
+	            	<option value="${cliente.id}">${cliente.nome}</option>
+	            </c:forEach>	                        
+            </select>
+            <br/>        
+            <label for="versao">Versão</label>
+            <select id="versao">
+            	<option selected='selected' value='0'>-- Selecione --</option>
+            	<c:if test="${not empty versaos}">            
+	            	<c:forEach var="versao" items="${versaos}">
+		            	<option value="${versao.id}">${versao.descricao}</option>
+		            </c:forEach>	 	          
+	            </c:if>  
+            
+            </select>
+            <br/>
+            <label id="versaaso" for="versaaso">Versãow</label>
+            <select id="versasdo"></select>
+            <br/>
+            <label for="statasdus">Statuss</label>
+            <select id="statasdfus"></select>      		
+      		<BR />      
+            <label for="status">Status</label>
+            <select id="status">
+            	<option selected='selected' value='0'>-- Selecione --</option>
+            	<c:forEach var="status" items="${statusatividades}">
+	            	<option value="${status}" > ${status} </option>	
+	            </c:forEach>
+            </select>
+            <br/>
+            <label for="usuario">Usuario Alocado</label>
+            <select id="usuario">
+            	<option selected='selected' value='0'>-- Selecione --</option>
+            	<c:forEach var="usuario" items="${usuarios}">
+	            	<option value="${usuario.id}" > ${usuario.login} </option>	
+	            </c:forEach>
+            </select>
+            <br/>            
+            <label for="prioridade">Prioridade</label>
+            <select id="prioridade">
+            	<option selected='selected' value='0'>-- Selecione --</option>
+            	<c:forEach var="prioridade" items="${prioridades}">
+	            	<option value="${prioridade.id}" > ${prioridade.descricao} </option>	
+	            </c:forEach>
+            </select>
+            <br/> 
+            <label for="dataInicio">Data Inicial</label>                
+			<input id="dataInicio" />                   
+			<br/> 
+            <label for="dataFinal">Data Final</label>                
+			<input id="dataFinal" />   
+			  <br/>
+            <label for="commitado">Commitado</label>
+            <select id="commitado">
+            	<option value='true'>Sim</option>
+            	<option selected='selected' value='false'>Não</option>
+            </select>            
+            <input type="submit" id="btnFiltrar" value="Filtrar" style="margin-left:50px"/>
+        <!-- , widgetAttrs : {promptMessage: '${sec_field_validation}', invalidMessage: '${sec_field_invalid}', required: ${required}, constraints: {datePattern : '${sec_dateTimePattern}', required : ${required}}, datePattern : '${sec_dateTimePattern}'} -->
+    </table:fieldset>    
+    
+        <table cellspacing="0" class="tablesorter" id="large">
+            <thead>
+                <tr>
+                	<th>#</th>
+                    <th>ID</th>
+                    <th>Título</th>
+                    <th>Data</th>
+                    <th>Projeto</th>
+                    <th>Módulo</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+            
+            </tbody>   
+        </table>        
+        
+    </util:panel>
+
+    <page:list id="pl_br_com_kamaleon_business_projeto_Atividade" items="${atividades}" render="false" z="user-managed">
+        <table:table data="${atividades}" id="l_br_com_kamaleon_business_projeto_Atividade" path="/atividades" z="nEU8rOiWf8YGFr1E2mDFUXpafSI=">
+            <table:column id="c_br_com_kamaleon_business_projeto_Atividade_projeto" property="projeto" z="F9pWMcleHvwMUT7l62MFF4g7GEk="/>
+            <table:column id="c_br_com_kamaleon_business_projeto_Atividade_titulo" property="titulo" z="3U8FmBWyNlI0ipdXXX3L20klUTg="/>
+            <table:column id="c_br_com_kamaleon_business_projeto_Atividade_descricao" property="descricao" z="3y9x/XgvekkCWriybTOqcg8o4Ac="/>
+            <table:column date="true" dateTimePattern="${atividade_datainicio_date_format}" id="c_br_com_kamaleon_business_projeto_Atividade_dataInicio" property="dataInicio" z="eSG56Y/I4h3NChvAEzx6AsvK6EQ="/>
+            <table:column id="c_br_com_kamaleon_business_projeto_Atividade_usuarioCadastro" property="usuarioCadastro" z="GL3XhGjbJ9sTmzlxRUs+qAauQoY="/>
+            <table:column id="c_br_com_kamaleon_business_projeto_Atividade_usuarioAlocado" property="usuarioAlocado" z="qiJDXikagblDKb/rowBw39XyBVs="/>
+        </table:table>
+    </page:list>
+    
+</div>
+

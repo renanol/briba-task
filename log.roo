@@ -1,0 +1,135 @@
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-10-10 09:32:41
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-10-10 09:58:58
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-10-10 10:05:15
+// [failed] entity jpa --class ~.business.empresa.setor.Setor
+// [failed] field string --fieldName descricao
+entity jpa --class ~.business.empesa.setor.Setor
+entity jpa --class ~.business.empesa.setor.Setor --extends ~.generic.CodigoKamaleon
+field string --fieldName descricao
+service --interface ~.business.projeto.versao.VersaoService --entity ~.business.projeto.versao.Versao
+service --interface ~.business.empesa.setor.SetorService --entity ~.business.empesa.setor.Setor
+web mvc all --package ~.controller
+entity jpa --class ~.business.projeto.modulo.Modulo
+entity jpa --class ~.business.projeto.modulo.SubModulo
+entity jpa --class ~.business.projeto.categoria.Categoria
+service --interface ~.business.projeto.modulo.ModuloService --entity ~.business.projeto.modulo.Modulo
+service --interface ~.business.projeto.modulo.SubModuloService --entity ~.business.projeto.modulo.SubModulo
+web mvc all --package ~.controller
+service --entity ~.business.projeto.categoria.CategoriaService --interface ~.business.projeto.categoria.Categoria
+service --entity ~.business.projeto.categoria.Categoria --interface ~.business.projeto.categoria.CategoriaService
+web mvc all --package ~.controller
+web mvc all --package ~.controller
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-10-11 13:11:28
+backup
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-10-11 18:02:22
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-10-17 08:24:33
+osgi start --url file:///Users/bschoche/Documents/workspace-sts-2.9.0.RELEASE/CityTimeAddOn/target/com.ct.roo.addon.tbootstrap-0.1.0.BUILD-SNAPSHOT.jar
+osgi start --url  /home/desenvolvedor/Documentos/killer/com.ct.roo.addon.tbootstrap-0.1.0.BUILD-SNAPSHOT.jar
+osgi start --url  /home/desenvolvedor/Documentos/killer/com.ct.roo.addon.tbootstrap-0.1.0.BUILD-SNAPSHOT
+osgi start --url  /home/desenvolvedor/Documentos/killer/com.ct.roo.addon.tbootstrap-0.1.0.BUILD-SNAPSHOT.jar
+osgi start --url  /home/desenvolvedor/Documentos/killer/target/com.ct.roo.addon.tbootstrap-0.1.0.BUILD-SNAPSHOT.jar
+osgi start --url  /home/desenvolvedor/Documentos/killer/target/com.ct.roo.addon.tbootstrap-0.1.0.BUILD-SNAPSHOT.jar
+osgi start --url  /home/desenvolvedor/Documentos/killer/target/com.ct.roo.addon.tbootstrap-0.1.0.BUILD-SNAPSHOT.jar
+osgi start --url  /home/desenvolvedor/Documentos/killer/target/com.ct.roo.addon.tbootstrap-0.1.0.BUILD-SNAPSHOT.jar
+entity jpa --class ~.business.projeto.prioridade.Prioridade --extends ~.generic.CodigoKamaleon
+entity jpa --class ~.business.projeto.situacao.Situacao --extends ~.generic.CodigoKamaleon
+service --interface ~.business.projeto.situacao.SituacaoService --entity ~.business.projeto.situacao.Situacao
+service --interface ~.business.projeto.prioridade.Prioridade --entity ~.business.projeto.prioridade.Prioridade
+entity jpa --class ~.business.projeto.prioridade.Prioridade --extends ~.generic.CodigoKamaleon
+service --interface ~.business.projeto.prioridade.PrioridadeService --entity ~.business.projeto.prioridade.Prioridade
+web mvc all --package br.com.kamaleon.controller
+web mvc update tags 
+web mvc all --package br.com.kamaleon.controller
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-10-17 13:51:30
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-10-17 13:52:16
+entity jpa --class ~.business.projeto.prioridade.Prioridade
+service --interface ~.business.projeto.prioridade.Prioridade --entity ~.business.projeto.prioridade.Prioridade
+entity jpa --class ~.business.projeto.prioridade.Prioridade
+service --interface ~.business.projeto.prioridade.PrioridadeService --entity ~.business.projeto.prioridade.Prioridade
+web mvc all --package br.com.kamaleon.controller
+web mvc all --package ~.controller
+focus --class ~.business.projeto.Atividade
+finder list --depth 2 --filter like
+finder list --depth 2 --filter like
+// [failed] finder add findAtividadesByCommitadoNotOrDescricaoLike
+// [failed] finder add findAtividadesByVersaoOrTituloLike
+finder list
+// [failed] finder add findAtividadesByVersao
+addon search postgres
+addon search 
+osgi obr url add --url http://repository-sillyweasel.forge.cloudbees.com/release/repository.xml
+osgi obr start --bundleSymbolicName org.sillyweasel.addons.jqueryui
+osgi obr url remove --url http://repository-sillyweasel.forge.cloudbees.com/release/repository.xml
+addon install id 20
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-10-17 16:16:27
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-10-18 11:58:58
+service --interface ~.business.projeto.atividade.AtividadeService --entity ~.business.projeto.Atividade
+hint
+hint json
+web mvc json all
+web mvc json all --package ~.json
+help
+web mvc json all 
+web mvc update tags 
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-10-19 10:16:04
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-10-19 10:17:35
+backup
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-10-19 15:00:06
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-10-24 08:46:51
+finder list --class ~.business.projeto.modulo.Modulo
+// [failed] finder add --finderName findModuloesByProjeto
+repository jpa --interface ~.business.projeto.atividade.AtividadeRepository --entity ~.business.projeto.Atividade
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-10-24 16:16:15
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-10-25 08:41:23
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-10-25 13:54:18
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-10-25 13:58:27
+finder list --class ~.business.projeto.modulo.Modulo
+// [failed] finder add ---class ~.business.projeto.modulo.Modulo --finderName findModuloesByProjeto
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-10-25 16:26:11
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-10-26 09:49:41
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-10-26 12:00:17
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-10-26 13:30:37
+focus --class ~.business.projeto.Atividade
+// [failed] field enum --fieldName StatusAtividade --type ~.business.projeto.atividade.StatusAtividade
+// [failed] enum constant --name S
+enum type --class ~.business.projeto.atividade.StatusAtividade
+enum constant --name ABERTO
+enum constant --name ANDAMENTO
+enum constant --name FECHADO
+focus --class ~.business.projeto.Atividade
+// [failed] field enum --fieldName statusAtividade --type ~.business.projeto.atividade.StatusAtividade
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-10-29 11:40:47
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-10-29 11:59:24
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-10-30 13:17:24
+web mvc all --package ~.controller
+web mvc all --package ~.controller
+web mvc all --package ~.controller
+web mvc all --package ~.controller
+web mvc all --package ~.controller
+web mvc all --package ~.controller
+backup
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-11-01 17:39:47
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-11-05 09:24:44
+entity jpa --class ~.business.projeto.atividade.AtividadeHistorico
+service --interface ~.business.projeto.atividade.AtividadeHistoricoService --entity ~.business.projeto.atividade.AtividadeHistorico
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-11-05 11:57:42
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-11-06 13:25:37
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-11-06 18:21:54
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-11-07 13:07:44
+backup
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-11-07 18:14:33
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-11-09 15:22:46
+focus --class ~.business.projeto.Atividade
+// [failed] field file --contentType PDF --fieldName arquivo
+// [failed] field file --contentType PNG --fieldName arquivo
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-11-09 16:33:43
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-11-09 17:27:54
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-11-09 18:06:11
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-11-12 10:48:03
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2012-11-12 11:57:17
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-11-13 13:37:53
+backup
+backup
+backup
+backup
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2012-11-23 15:40:34

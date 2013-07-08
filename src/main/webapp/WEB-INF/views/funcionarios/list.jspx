@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_br_com_kamaleon_business_pessoa_funcionario_Funcionario" items="${funcionarios}" z="WeJSWFDZlPW4q79Pdd3MhShSZu4=">
+        <table:table data="${funcionarios}" id="l_br_com_kamaleon_business_pessoa_funcionario_Funcionario" path="/funcionarios" z="AQDff5vjfRJF/m9wWAvbgcHvEyI=">
+            <table:column date="true" dateTimePattern="${funcionario_datanascimento_date_format}" id="c_br_com_kamaleon_business_pessoa_funcionario_Funcionario_dataNascimento" property="dataNascimento" z="LtdLaPWvgCk5HvXEicwn4z68TJI="/>
+            <table:column date="true" dateTimePattern="${funcionario_dataadmissao_date_format}" id="c_br_com_kamaleon_business_pessoa_funcionario_Funcionario_dataAdmissao" property="dataAdmissao" z="mU8xMTArHrw+5XO5dqvXV8ddzUU="/>
+            <table:column id="c_br_com_kamaleon_business_pessoa_funcionario_Funcionario_nome" property="nome" z="+67SzrZ/gR0YN22RSPMPCTwQ9SA="/>
+            <table:column id="c_br_com_kamaleon_business_pessoa_funcionario_Funcionario_endereco" property="endereco" z="BXI4rier0AAO6383Mvy5eL7X+4M="/>
+            <table:column id="c_br_com_kamaleon_business_pessoa_funcionario_Funcionario_apelido" property="apelido" z="CeOws9Dnf+pRaBBooScxTf8ipXI="/>
+            <table:column id="c_br_com_kamaleon_business_pessoa_funcionario_Funcionario_cpfCnpj" property="cpfCnpj" z="bXGVnITDaXZjSzYufKj7mFT6h+8="/>
+        </table:table>
+    </page:list>
+</div>

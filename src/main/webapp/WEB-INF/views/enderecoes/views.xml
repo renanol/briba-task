@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="admin" name="enderecoes/list">
+        <put-attribute name="body" value="/WEB-INF/views/enderecoes/list.jspx"/>
+    </definition>
+<definition extends="admin" name="enderecoes/show">
+        <put-attribute name="body" value="/WEB-INF/views/enderecoes/show.jspx"/>
+    </definition>
+<definition extends="admin" name="enderecoes/create">
+        <put-attribute name="body" value="/WEB-INF/views/enderecoes/create.jspx"/>
+    </definition>
+<definition extends="admin" name="enderecoes/update">
+        <put-attribute name="body" value="/WEB-INF/views/enderecoes/update.jspx"/>
+    </definition>
+</tiles-definitions>

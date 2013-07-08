@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_br_com_kamaleon_business_pessoa_empresa_Empresa" object="${empresa}" path="/empresas" z="GGP0JBP5TxOB4QOsATq9KSvvZXY=">
+        <field:display field="descricao" id="s_br_com_kamaleon_business_pessoa_empresa_Empresa_descricao" object="${empresa}" z="zmvsxMGyW+Mo1F8ZNCYPStKCKHc="/>
+        <field:display field="observacao" id="s_br_com_kamaleon_business_pessoa_empresa_Empresa_observacao" object="${empresa}" z="6Mh3YWLnX+ibgo1KnQy+S4QrjaM="/>
+        <field:display field="nome" id="s_br_com_kamaleon_business_pessoa_empresa_Empresa_nome" object="${empresa}" z="817IkCuekt7iUEzk8K59c6Ev4pU="/>
+        <field:display field="endereco" id="s_br_com_kamaleon_business_pessoa_empresa_Empresa_endereco" object="${empresa}" z="2zX/8UPLHPZRVYfQuYcvg2bsYfU="/>
+        <field:display field="apelido" id="s_br_com_kamaleon_business_pessoa_empresa_Empresa_apelido" object="${empresa}" z="/KfiMpC2G5SdVC8WnYdsbgo52wg="/>
+        <field:display field="cpfCnpj" id="s_br_com_kamaleon_business_pessoa_empresa_Empresa_cpfCnpj" object="${empresa}" z="HvNhHViV8IniRNaINXrg9/f+ikc="/>
+    </page:show>
+</div>

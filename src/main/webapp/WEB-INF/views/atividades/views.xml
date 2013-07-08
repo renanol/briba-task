@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+	<definition extends="admin" name="atividades/list">
+		<put-attribute name="body"
+			value="/WEB-INF/views/atividades/list.jspx" />
+	</definition>
+	<definition extends="admin" name="atividades/show">
+		<put-attribute name="body"
+			value="/WEB-INF/views/atividades/show.jspx" />
+	</definition>
+	<definition extends="admin" name="atividades/create">
+		<put-attribute name="body"
+			value="/WEB-INF/views/atividades/create.jspx" />
+	</definition>
+	<definition extends="admin" name="atividades/update">
+		<put-attribute name="body"
+			value="/WEB-INF/views/atividades/update.jspx" />
+	</definition>
+
+	<definition extends="admin" name="atividades/finish">
+		<put-attribute name="body"
+			value="/WEB-INF/views/atividades/finish.jspx" />
+	</definition>
+</tiles-definitions>

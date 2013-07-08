@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:c="http://java.sun.com/jsp/jstl/core" xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:spring="http://www.springframework.org/tags" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <script type="text/javascript"><![CDATA[
+	  	$(document).ready(function(){
+	  		
+	  		var opcao = "<option selected='selected' value='0'>-- Selecione --</option>";
+	  		var opcaoN = "<option selected='selected' disabled value='0'>-- Nenhum --</option>";
+	  		
+	  		$('#_projeto_id').append(opcao);
+	  		$('#_subModulo_id').empty();
+	  		$('#_modulo_id').empty();
+	  		
+	  		$('#_subModulo_id').append(opcaoN);
+	  		$('#_modulo_id').append(opcaoN);
+	  		
+	  		$("#_projeto_id").click(function(){
+	  			
+	  			$('#_modulo_id').empty();
+	  			$('#_subModulo_id').empty();
+	    		$('#_modulo_id').append(opcao);
+	    		
+	  	  		var idProjeto = $('#_projeto_id option:selected').val();
+	  			$.getJSON("atividades/json/"+idProjeto, function(data){
+	  	  			$.each(data, function(key, val) {
+	  	  				var option = "<option value='"+val.id+"'>"+val.descricao+"</option>";
+	  		    		$('#_modulo_id').append(option);
+	
+	  	  			});
+	  	  		});			
+	  		});
+	  		
+	  		$("#_modulo_id").click(function(){
+	  			
+	  			$('#_subModulo_id').empty();
+	    		$('#_subModulo_id').append(opcao);
+	    		
+	  	  		var idModulo = $('#_modulo_id option:selected').val();
+	  			$.getJSON("/briba-task/atividades/json/sub/"+idModulo, function(data){
+	  	  			$.each(data, function(key, val) {
+	  	  				var option = "<option value='"+val.id+"'>"+val.descricao+"</option>";
+	  		    		$('#_subModulo_id').append(option);
+	
+	  	  			});
+	  	  		});			
+	  		});
+	  		
+	  	});
+  	]]></script>
+    <form:create id="fc_br_com_kamaleon_business_projeto_Atividade" modelAttribute="atividade" multipart="true" path="/atividades" render="${empty dependencies}" z="user-managed">
+        <field:select field="projeto" id="c_br_com_kamaleon_business_projeto_Atividade_projeto" itemLabel="descricao" itemValue="id" items="${projetoes}" path="/projetoes" z="user-managed"/>
+        <field:select field="categoria" id="c_br_com_kamaleon_business_projeto_Atividade_categoria" itemValue="id" items="${categorias}" path="/categorias" z="aWqIUCJfMViBReJPgEGEpK1Hehc="/>
+        <field:select field="modulo" id="c_br_com_kamaleon_business_projeto_Atividade_modulo" itemLabel="descricao" itemValue="id" items="${moduloes}" path="/moduloes" z="user-managed"/>
+        <field:select field="subModulo" id="c_br_com_kamaleon_business_projeto_Atividade_subModulo" itemValue="id" items="${submoduloes}" path="/submoduloes" required="true" z="eVjMsZCIeBKBc0Oet4a1CjqRmKo="/>
+        <field:select field="statusAtividade" id="c_br_com_kamaleon_business_projeto_Atividade_statusAtividade" items="${statusatividades}" path="statusatividades" z="Dked06I4ufAg5MJr9ddoQRXvdi4="/>
+        <field:select field="versao" id="c_br_com_kamaleon_business_projeto_Atividade_versao" itemLabel="descricao" itemValue="id" items="${versaos}" path="/versaos" render="false" z="user-managed"/>
+        <field:select field="prioridade" id="c_br_com_kamaleon_business_projeto_Atividade_prioridade" itemValue="id" items="${prioridades}" path="/prioridades" required="true" z="7mv3dFgEpRUIQWK/hzaS3tSnAqw="/>
+        <field:select field="usuarioCadastro" id="c_br_com_kamaleon_business_projeto_Atividade_usuarioCadastro" itemLabel="login" itemValue="id" items="${usuarios}" path="/usuarios" render="false" z="user-managed"/>
+        <field:select field="usuarioAlocado" id="c_br_com_kamaleon_business_projeto_Atividade_usuarioAlocado" itemLabel="login" itemValue="id" items="${usuarios}" path="/usuarios" z="user-managed"/>
+        <field:input field="titulo" id="c_br_com_kamaleon_business_projeto_Atividade_titulo" z="qVf/Ocafb3TGtNYdWhn0U+CMKtA="/>
+        <field:textarea field="descricao" id="c_br_com_kamaleon_business_projeto_Atividade_descricao" z="SuPqHRFIyF9pIdEW9T/4FxMzrb8="/>
+        <field:checkbox field="commitado" id="c_br_com_kamaleon_business_projeto_Atividade_commitado" render="false" z="user-managed"/>
+        <field:datetime dateTimePattern="${atividade_datainicio_date_format}" field="dataInicio" id="c_br_com_kamaleon_business_projeto_Atividade_dataInicio" required="true" z="3MuqUFJkuoBlZri/GqpZSukE/n4="/>
+        <field:input field="tempoEstimado" id="c_br_com_kamaleon_business_projeto_Atividade_tempoEstimado" label="Tempo Estimado(h)" z="user-managed"/>
+        <field:input field="tempoGasto" id="c_br_com_kamaleon_business_projeto_Atividade_tempoGasto" render="false" z="user-managed"/>
+        <field:input field="terminado" id="c_br_com_kamaleon_business_projeto_Atividade_terminado" render="false" z="user-managed"/>
+        <field:textarea field="comentario" id="c_br_com_kamaleon_business_projeto_Atividade_comentario" render="false" z="user-managed"/>
+        <field:input field="anotacoes" id="c_br_com_kamaleon_business_projeto_Atividade_anotacoes" render="false" z="user-managed"/>
+        <field:datetime dateTimePattern="${atividade_dataprevista_date_format}" field="dataPrevista" id="c_br_com_kamaleon_business_projeto_Atividade_dataPrevista" z="jUECiEkSIcaUVyp/D8VosQbNSug="/>
+        <field:select field="cliente" id="c_br_com_kamaleon_business_projeto_Atividade_cliente" itemLabel="nome" itemValue="id" items="${clientes}" path="/clientes" z="user-managed"/>
+        <field:input field="atividadePai" id="c_br_com_kamaleon_business_projeto_Atividade_atividadePai" z="H2plQI8eRYRB1NoVNkM3gaLVC+g="/>
+        <field:input field="progresso" id="c_br_com_kamaleon_business_projeto_Atividade_progresso" render="false" z="user-managed"/>
+        <field:input field="arquivo" id="c_br_com_kamaleon_business_projeto_Atividade_arquivo" type="file" z="user-managed"/>
+        <field:textarea field="caminhoArquivo" id="c_br_com_kamaleon_business_projeto_Atividade_caminhoArquivo" render="false" z="user-managed"/>
+    </form:create>
+    <form:dependency dependencies="${dependencies}" id="d_br_com_kamaleon_business_projeto_Atividade" render="${not empty dependencies}" z="sV0XWk07M9Ndaa6y2I29aQr1aVE="/>
+</div>

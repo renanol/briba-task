@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_br_com_kamaleon_business_pessoa_usuario_Usuario" object="${usuario}" path="/usuarios" z="7Q74ytk/qbsd8XxjYxUbPPuFTvs=">
+        <field:display field="email" id="s_br_com_kamaleon_business_pessoa_usuario_Usuario_email" object="${usuario}" z="BTATrxlvCY1oPjR87NANBli27QI="/>
+        <field:display field="status" id="s_br_com_kamaleon_business_pessoa_usuario_Usuario_status" object="${usuario}" z="Ydrtas0zAOVAezatyfKt5ZucE8I="/>
+        <field:display field="grupo" id="s_br_com_kamaleon_business_pessoa_usuario_Usuario_grupo" object="${usuario}" z="hcTyEE5/g6igcb8HYfEjeV07q8c="/>
+        <field:display field="login" id="s_br_com_kamaleon_business_pessoa_usuario_Usuario_login" object="${usuario}" z="ijVGSGALiJ1NMMvB4SaSYtAHDYM="/>
+        <field:display field="senha" id="s_br_com_kamaleon_business_pessoa_usuario_Usuario_senha" object="${usuario}" z="ADNMoskWuoxNQzoXDOiOcK/NUcE="/>
+        <field:display field="urlFoto" id="s_br_com_kamaleon_business_pessoa_usuario_Usuario_urlFoto" object="${usuario}" render="false" z="user-managed"/>
+    </page:show>
+</div>

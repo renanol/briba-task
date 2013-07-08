@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_br_com_kamaleon_business_pessoa_usuario_Usuario" items="${usuarios}" z="l469rWwoKILpF3vED3UjuU3qVLM=">
+        <table:table data="${usuarios}" id="l_br_com_kamaleon_business_pessoa_usuario_Usuario" path="/usuarios" z="6HACZBFKsreNLwlKjcBY3z90oWg=">
+            <table:column id="c_br_com_kamaleon_business_pessoa_usuario_Usuario_id" property="id" z=""/>
+            <table:column id="c_br_com_kamaleon_business_pessoa_usuario_Usuario_email" property="email" z="zabbowWnTYtTWookvs+jQiYttFw="/>
+            <table:column id="c_br_com_kamaleon_business_pessoa_usuario_Usuario_status" property="status" z="S7Jp2CYIuOo8VKJXtngzC9xwQpM="/>
+            <table:column id="c_br_com_kamaleon_business_pessoa_usuario_Usuario_grupo" property="grupo" z="A/ryAbs/TjKgAdihe32PQ1vMZM4="/>
+            <table:column id="c_br_com_kamaleon_business_pessoa_usuario_Usuario_login" property="login" z="HZGRSvYUwhG4CS0HHJoxMs3DbtA="/>
+            <table:column id="c_br_com_kamaleon_business_pessoa_usuario_Usuario_senha" property="senha" z="0CFXUTC/x0fj9XXjouz4nOxbbyo="/>
+            <table:column id="c_br_com_kamaleon_business_pessoa_usuario_Usuario_urlFoto" property="urlFoto" render="false" z="user-managed"/>
+        </table:table>
+    </page:list>
+</div>

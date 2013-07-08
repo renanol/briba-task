@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN" "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+<tiles-definitions>
+    <definition extends="admin" name="funcionarios/list">
+        <put-attribute name="body" value="/WEB-INF/views/funcionarios/list.jspx"/>
+    </definition>
+<definition extends="admin" name="funcionarios/show">
+        <put-attribute name="body" value="/WEB-INF/views/funcionarios/show.jspx"/>
+    </definition>
+<definition extends="admin" name="funcionarios/create">
+        <put-attribute name="body" value="/WEB-INF/views/funcionarios/create.jspx"/>
+    </definition>
+<definition extends="admin" name="funcionarios/update">
+        <put-attribute name="body" value="/WEB-INF/views/funcionarios/update.jspx"/>
+    </definition>
+</tiles-definitions>

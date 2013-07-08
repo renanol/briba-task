@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_br_com_kamaleon_business_endereco_Endereco" object="${endereco}" path="/enderecoes" z="yu6G/wvxCawRtNzHzS3PT1cjS+0=">
+        <field:display field="logradouro" id="s_br_com_kamaleon_business_endereco_Endereco_logradouro" object="${endereco}" z="k1z03QfP+I847Z9XiM2zTpTPKd4="/>
+        <field:display field="bairro" id="s_br_com_kamaleon_business_endereco_Endereco_bairro" object="${endereco}" z="nZjoFURgAngqymSQSTXJBlvMmoU="/>
+        <field:display field="numero" id="s_br_com_kamaleon_business_endereco_Endereco_numero" object="${endereco}" z="34DeDNYoQI7ZNvmRF2+5TbRFjXU="/>
+        <field:display field="cep" id="s_br_com_kamaleon_business_endereco_Endereco_cep" object="${endereco}" z="SxsdwXms2jfuAHu/8HH4YI7qgUg="/>
+        <field:display field="estado" id="s_br_com_kamaleon_business_endereco_Endereco_estado" object="${endereco}" z="weOCrYS650m621adYOOr1sl8EyE="/>
+        <field:display field="cidade" id="s_br_com_kamaleon_business_endereco_Endereco_cidade" object="${endereco}" z="vcOo+jeThXOHpuJIzZPc9HdjuWE="/>
+    </page:show>
+</div>

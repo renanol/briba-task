@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_br_com_kamaleon_business_projeto_modulo_Modulo" modelAttribute="modulo" path="/moduloes" versionField="none" z="1IQ3RZuadt7dCs5m731EpzlwNHI=">
+        <field:input field="descricao" id="c_br_com_kamaleon_business_projeto_modulo_Modulo_descricao" z="yfpvnb532XedjpWuoxz52D/1AdQ="/>
+        <field:select field="projeto" id="c_br_com_kamaleon_business_projeto_modulo_Modulo_projeto" itemValue="id" items="${projetoes}" path="/projetoes" required="true" z="awwCOMJsDcb0fv5Tp0rPW+UhchQ="/>
+    </form:update>
+</div>

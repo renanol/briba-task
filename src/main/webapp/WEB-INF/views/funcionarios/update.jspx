@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_br_com_kamaleon_business_pessoa_funcionario_Funcionario" modelAttribute="funcionario" path="/funcionarios" versionField="none" z="user-managed">
+        <field:datetime dateTimePattern="${funcionario_datanascimento_date_format}" field="dataNascimento" id="c_br_com_kamaleon_business_pessoa_funcionario_Funcionario_dataNascimento" required="true" z="boggy9mpyuR4+mbgz7YkL9y0ATI="/>
+        <field:datetime dateTimePattern="${funcionario_dataadmissao_date_format}" field="dataAdmissao" id="c_br_com_kamaleon_business_pessoa_funcionario_Funcionario_dataAdmissao" required="true" z="DC4m9dReCl9P0zHvAj/sq56I/8E="/>
+        <field:select field="cargo" id="c_br_com_kamaleon_business_pessoa_funcionario_Funcionario_cargo" itemValue="id" items="${cargoes}" path="/cargoes" required="true" z="MYCsSv85lfbWTvL8o0EpX+mQkys="/>
+        <!-- Endereço -->
+        <field:input field="endereco.logradouro" id="c_br_com_kamaleon_business_endereco_Endereco_logradouro" z="manager-user"/>
+        <field:input field="endereco.bairro" id="c_br_com_kamaleon_business_endereco_Endereco_bairro" z="manager-user"/>
+        <field:input field="endereco.numero" id="c_br_com_kamaleon_business_endereco_Endereco_numero" z="manager-user"/>
+        <field:input field="endereco.cidade" id="c_br_com_kamaleon_business_endereco_Endereco_cidade" z="manager-user"/>
+        <field:input field="endereco.estado" id="c_br_com_kamaleon_business_endereco_Endereco_estado" z="manager-user"/>
+        <field:input field="endereco.cep" id="c_br_com_kamaleon_business_endereco_Endereco_cep" z="manager-user"/>
+        <!-- Usuário -->
+        <field:input field="usuario.id" id="c_br_com_kamaleon_business_pessoa_usuario_Usuario_id"/>
+        <field:input field="usuario.login" id="c_br_com_kamaleon_business_pessoa_usuario_Usuario_login" required="true" z="manager-user"/>
+        <field:input field="usuario.senha" id="c_br_com_kamaleon_business_pessoa_usuario_Usuario_senha" required="true" z="manager-user"/>
+        <field:input field="usuario.email" id="c_br_com_kamaleon_business_pessoa_usuario_Usuario_email" required="true" validationMessageCode="field_invalid_email" z="manager-user"/>
+        <field:select field="usuario.status" id="c_br_com_kamaleon_business_pessoa_usuario_Usuario_status" items="${statuses}" path="statuses" required="true" z="manager-user"/>
+        <field:select field="usuario.grupo" id="c_br_com_kamaleon_business_pessoa_usuario_Usuario_grupo" itemValue="id" items="${grupoes}" path="/grupoes" z="manager-user"/>
+        <field:select field="endereco" id="c_br_com_kamaleon_business_pessoa_funcionario_Funcionario_endereco" itemValue="id" items="${enderecoes}" path="/enderecoes" render="false" z="user-managed"/>
+        <field:select field="usuario" id="c_br_com_kamaleon_business_pessoa_funcionario_Funcionario_usuario" itemValue="id" items="${usuarios}" path="/usuarios" render="false" z="user-managed"/>
+        <field:input field="nome" id="c_br_com_kamaleon_business_pessoa_funcionario_Funcionario_nome" z="82kRYX33iT/VA0lpOg5dNaXKChw="/>
+        <field:input field="apelido" id="c_br_com_kamaleon_business_pessoa_funcionario_Funcionario_apelido" z="Xzj1UD+gZVbmGSqQjO5fhfUouKE="/>
+        <field:input field="cpfCnpj" id="c_br_com_kamaleon_business_pessoa_funcionario_Funcionario_cpfCnpj" z="Sys3hd/iHtToNxjsgSfGQSZvRqE="/>
+    </form:update>
+</div>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_br_com_kamaleon_business_projeto_modulo_SubModulo" items="${submoduloes}" z="KOEGQpnMMBaHt6FBAEuoTewiup8=">
+        <table:table data="${submoduloes}" id="l_br_com_kamaleon_business_projeto_modulo_SubModulo" path="/submoduloes" z="/lsuu1Hzz39zRIlHVzh+sCjyCzI=">
+            <table:column id="c_br_com_kamaleon_business_projeto_modulo_SubModulo_descricao" property="descricao" z="qN6bxhQm1ratKjB/Xb/RmVavV2g="/>
+            <table:column id="c_br_com_kamaleon_business_projeto_modulo_SubModulo_modulo" property="modulo" z="9M4g1O9nhvA6E4i7K8B3P2LVLgs="/>
+        </table:table>
+    </page:list>
+</div>

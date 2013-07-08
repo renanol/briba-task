@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_br_com_kamaleon_business_projeto_versao_Versao" items="${versaos}" z="EcvOnhNWWE2IvIQW5pdF4CCw0Yk=">
+        <table:table data="${versaos}" id="l_br_com_kamaleon_business_projeto_versao_Versao" path="/versaos" z="dB49iYiSWEBRTncRu9T0l2aBHyw=">
+            <table:column id="c_br_com_kamaleon_business_projeto_versao_Versao_descricao" property="descricao" z="yLhRNAcn8joG/qs8JAwouludrvM="/>
+            <table:column date="true" dateTimePattern="${versao_data_date_format}" id="c_br_com_kamaleon_business_projeto_versao_Versao_data" property="data" z="ZhtkN/DnRT74EP+y1qKZmEk/GpA="/>
+            <table:column id="c_br_com_kamaleon_business_projeto_versao_Versao_atividades" property="atividades" z="dYpwZ9RcMlHhUrnVg0b5Q9pHj6c="/>
+        </table:table>
+    </page:list>
+</div>

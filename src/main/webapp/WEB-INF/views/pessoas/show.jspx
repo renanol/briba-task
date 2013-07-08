@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_br_com_kamaleon_business_pessoa_Pessoa" object="${pessoa}" path="/pessoas" z="zHaLqS71PinEGXHOepQX8OEsz/I=">
+        <field:display field="nome" id="s_br_com_kamaleon_business_pessoa_Pessoa_nome" object="${pessoa}" z="K/5VR6DbTHN2bgLRO6JAnSxuzzc="/>
+        <field:display field="endereco" id="s_br_com_kamaleon_business_pessoa_Pessoa_endereco" object="${pessoa}" z="pzw8MTVCrMlevDdjHnImrxljF30="/>
+        <field:display field="apelido" id="s_br_com_kamaleon_business_pessoa_Pessoa_apelido" object="${pessoa}" z="FZNfXanpAaedMIQDkqoe3p3FO8k="/>
+        <field:display field="cpfCnpj" id="s_br_com_kamaleon_business_pessoa_Pessoa_cpfCnpj" object="${pessoa}" z="0Jvcu392LNq9p/9mOI83vdsGqjU="/>
+    </page:show>
+</div>
